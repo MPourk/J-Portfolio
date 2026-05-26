@@ -141,6 +141,18 @@
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
+
+ img {
+      width: 400px;
+      height: auto;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 
@@ -178,13 +190,35 @@
       <div class="project-grid">
 
         <div class="project">
-          <img src="./assets/pbi/Enddatesforproducts1.png" alt="Power BI Dashboard">
+          <img id="dashboardImage3" src="./assets/pbi/enddatesforproducts1.png" alt="Power BI Dashboard for products">
+
+<script>
+    const image3 = document.getElementById("dashboardImage3");
+    const images3 = ["./assets/pbi/enddatesforproducts1.png", "./assets/pbi/enddatesforproducts2.png"];
+    let index3 = 0;
+
+    image3.addEventListener("click", () => {
+      index3 = (index3 + 1) % images3.length;
+      image3.src = images3[index3];
+    });
+  </script>
+
           <h3>Product Lifecycle Management Dashboard</h3>
           <p>Tracks lifecycle milestones with KPIs and trend analysis for proactive asset planning.</p>
         </div>
 
         <div class="project">
-          <img src="./assets/tabl/ActiveEnterpriseAccounts1.png" alt="Tableau Dashboard">
+          <img id="dashboardImage1" src="./assets/tabl/ActiveEnterpriseAccounts1.png" alt="Tableau Dashboard for active enterprise acconts">
+<script>
+    const image = document.getElementById("dashboardImage1");
+    const images = ["./assets/tabl/ActiveEnterpriseAccounts1.png", "./assets/tabl/ActiveEnterpriseAccounts2.png", "./assets/tabl/ActiveEnterpriseAccounts3.png"];
+    let index = 0;
+
+    image.addEventListener("click", () => {
+      index = (index + 1) % images.length;
+      image.src = images[index];
+    });
+  </script>
           <h3>Enterprise Account Overview</h3>
           <p>Interactive mapping and segmentation of enterprise accounts across the U.S.</p>
         </div>
@@ -196,7 +230,19 @@
         </div>
 
         <div class="project">
-          <img src="./assets/tabl/NEPAccountsdashboard1.png" alt="Tableau Dashboard">
+          <img id="dashboardImage2" src="./assets/tabl/NEPAccountsdashboard1.png" alt="Tableau Dashboard for Enterprise accounts assets">
+<script>
+    const image2 = document.getElementById("dashboardImage2");
+    const images2 = ["./assets/tabl/NEPAccountsdashboard1.png", "./assets/tabl/NEPAccountsdashboard2.png", "./assets/tabl/NEPAccountsdashboard3.png","./assets/tabl/NEPAccountsdashboard4.png"];
+    let index2 = 0;
+
+    image2.addEventListener("click", () => {
+      index2 = (index2 + 1) % images2.length;
+      image2.src = images2[index2];
+    });
+  </script>
+
+
           <h3>Asset Audit & Configuration</h3>
           <p>Detailed asset tracking and configuration audits for enterprise systems.</p>
         </div>
