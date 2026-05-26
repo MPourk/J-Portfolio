@@ -274,64 +274,30 @@
   <footer>
     © 2026 Mercedeh Pourkhesali  
     <br><br>
-  <div id="visitorCounter" class="visitor-counter">
-    <span class="counter-icon">👁️</span>
-    <span class="counter-label">Profile Views</span>
-    <span id="visitorCount" class="counter-number">...</span>
+ <div class="visitor-counter">
+    <img id="visitorBadge" 
+         src="https://page-visit-counter.onrender.com/badge?username=mpourk&repo=J-Portfolio&style=neon&icon=eye" 
+         alt="Profile Views">
   </div>
 </footer>
-
-<script>
-  async function updateVisitorCount() {
-    try {
-      const response = await fetch("https://page-visit-counter.onrender.com/badge?username=mpourk&repo=J-Portfolio");
-
-       const data = await response.json();
-      document.getElementById("visitorCount").textContent = data.count || 0;
-    } catch (error) {
-      document.getElementById("visitorCount").textContent = "—";
-      console.error("Visitor count fetch failed:", error);
-    }
-  }
-  updateVisitorCount();
-</script>
 
 <style>
   .visitor-counter {
     display: inline-flex;
     align-items: center;
-    gap: 0.6em;
     background: linear-gradient(90deg, #0077b6, #00b4d8);
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 1em;
     padding: 0.6em 1.2em;
     border-radius: 8px;
     box-shadow: 0 0 12px rgba(0, 180, 216, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
-  .visitor-counter:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 18px rgba(0, 180, 216, 0.6);
-  }
-
-  .counter-icon {
-    font-size: 1.2em;
-  }
-
-  .counter-label {
-    letter-spacing: 0.5px;
-  }
-
-  .counter-number {
-    background-color: #023e8a;
-    padding: 0.2em 0.6em;
+  .visitor-counter img {
+    height: 28px;
     border-radius: 6px;
-    font-weight: 700;
-    color: #90e0ef;
   }
 </style>
+
+
 
 
 </body>
