@@ -274,9 +274,40 @@
   <footer>
     © 2026 Mercedeh Pourkhesali  
     <br><br>
+    <div class="visitor-counter">
   <img src="https://page-visit-counter.onrender.com/badge?username=mpourk&repo=J-Portfolio&style=neon&icon=eye" 
        alt="Visitor Count" />
+      </div>
   </footer>
+  <style>
+  .visitor-counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 0.6em 1.2em;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 180, 216, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .visitor-counter:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 18px rgba(0, 180, 216, 0.6);
+  }
+
+  .visitor-counter img {
+    height: 22px;
+    border-radius: 4px;
+  }
+
+  .counter-label {
+    letter-spacing: 0.5px;
+  }
+</style>
 
 </body>
 </html>
